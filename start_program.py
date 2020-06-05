@@ -10,7 +10,7 @@ Python testi logitukselle sekä OOP
 '''
 
 logging.basicConfig(filename="application.log", filemode="w", 
-    format="%(name)s - %(levelname)s - %(message)s", level=logging.DEBUG)
+    format="%(asctime)s  %(name)s  %(levelname)s: %(message)s", level=logging.DEBUG)
 
 class Myyja():
     def __init__(self, sukupuoli, ika, palkka):
@@ -56,13 +56,12 @@ class Kauppa():
 
 def alustaLogi():
     if os.path.exists("./application.log"):
-        print("Ohnose")
+        print("Logi application.log löytyy")
     
     return logging.getLogger("jehu")
 
 def toinenProsessi():
     logging.error("Kirjoitus toisesta prosessista")
-    print("Toka prosari kirjoitti")
 
 if __name__ == "__main__":
     mainlog = alustaLogi()
@@ -89,7 +88,6 @@ if __name__ == "__main__":
     logging.critical(viesti)
     kt.toinenTie(moniajolog)
 
-    print("Pääprosessi kirjoitti")
     lisalogi.kirjoitaToiseen("Pääjehu kutsuu toista loggeria")
 
     proslisalog = multiprocessing.Process(target=lisalogi.kirjoitaToiseen, args=("Tokalogi toinen pros",))

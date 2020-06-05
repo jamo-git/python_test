@@ -18,4 +18,3 @@ class LuokkaProsessi():
 
     def kirjoitaLogiin(self):
         self.logger.warning("LuokkaProsessi kirjoitti")
-        print("Luokkaprosessi on kirjoittanut")
