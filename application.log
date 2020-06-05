@@ -2,7 +2,7 @@ root - INFO - Tästä se alkaa
 jehu - INFO - Myyjät ja kaupat luotu
 moniajo - WARNING - LuokkaProsessi kirjoitti
 moniajo - ERROR - En katastrof
-root - DEBUG - Och människör
+root - CRITICAL - Och människör
 moniajo - DEBUG - Inte alls
 tokalogger - INFO - Toisesta loggerista viesti
 tokalogger - WARNING - Pääjehu kutsuu toista loggeria

@@ -86,7 +86,7 @@ if __name__ == "__main__":
 
     tie = kt.Kiertotie(moniajolog)
     viesti = tie.palautaTie()
-    logging.debug(viesti)
+    logging.critical(viesti)
     kt.toinenTie(moniajolog)
 
     print("Pääprosessi kirjoitti")
