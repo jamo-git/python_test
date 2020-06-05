@@ -1,6 +1,7 @@
 root - INFO - Tästä se alkaa
 root - INFO - Myyjät ja kaupat luotu
 root - WARNING - LuokkaProsessi kirjoitti
+root - ERROR - Kirjoitus toisesta prosessista
 root - ERROR - En katastrof
 root - DEBUG - Och människör
 root - DEBUG - Inte alls
@@ -12,6 +13,5 @@ root - INFO - Tuote myyty ja palkka korotettu
 root - INFO - ['Naytto', 'Tietokone']
 root - DEBUG - 2625.0
 root - DEBUG - ['Naytto', 'Tietokone', 'Prossu']
-root - ERROR - Kirjoitus toisesta prosessista
 tokalogger - INFO - Toisesta loggerista viesti
 tokalogger - WARNING - Tokalogi toinen pros
