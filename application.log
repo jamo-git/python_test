@@ -4,6 +4,8 @@ root - WARNING - LuokkaProsessi kirjoitti
 root - ERROR - En katastrof
 root - DEBUG - Och människör
 root - DEBUG - Inte alls
+tokalogger - INFO - Toisesta loggerista viesti
+tokalogger - WARNING - Pääjehu kutsuu toista loggeria
 root - INFO - ['Hiiri', 'Naytto', 'Tietokone']
 root - DEBUG - 2500
 root - INFO - Tuote myyty ja palkka korotettu
@@ -11,3 +13,5 @@ root - INFO - ['Naytto', 'Tietokone']
 root - DEBUG - 2625.0
 root - DEBUG - ['Naytto', 'Tietokone', 'Prossu']
 root - ERROR - Kirjoitus toisesta prosessista
+tokalogger - INFO - Toisesta loggerista viesti
+tokalogger - WARNING - Tokalogi toinen pros

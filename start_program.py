@@ -3,6 +3,7 @@ import kiertotie as kt
 import os.path
 import multiprocessing
 import time
+import lisalogi
 
 '''
 Python testi logitukselle sekä OOP
@@ -84,6 +85,10 @@ if __name__ == "__main__":
     kt.toinenTie(logging)
 
     print("Pääprosessi kirjoitti")
+    lisalogi.kirjoitaToiseen("Pääjehu kutsuu toista loggeria")
+
+    proslisalog = multiprocessing.Process(target=lisalogi.kirjoitaToiseen, args=("Tokalogi toinen pros",))
+    proslisalog.start()
 
     logging.info(verkkis.listaaTuotteet())
     logging.debug(verkkis.kerroMyyjanPalkka())
