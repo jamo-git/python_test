@@ -1,6 +1,8 @@
 import logging
 import kiertotie as kt
 import os.path
+import multiprocessing
+import time
 
 '''
 Python testi logitukselle sekä OOP
@@ -51,6 +53,10 @@ def alustaLogi():
     logging.basicConfig(filename="application.log", filemode="w", 
     format="%(name)s - %(levelname)s - %(message)s", level=logging.DEBUG)
 
+def toinenProsessi():
+    logging.error("Kirjoitus toisesta prosessista")
+    print("Toka prosari kirjoitti")
+
 if __name__ == "__main__":
     alustaLogi()
     logging.info("Tästä se alkaa")
@@ -62,10 +68,19 @@ if __name__ == "__main__":
 
     logging.info("Myyjät ja kaupat luotu")
 
+    prosessi = multiprocessing.Process(target=toinenProsessi)
+    prosessi.start()
+
+    luokka = kt.LuokkaProsessi(logging)
+    luokkapros = multiprocessing.Process(target=luokka.kirjoitaLogiin)
+    luokkapros.run()
+
     tie = kt.Kiertotie(logging)
     viesti = tie.palautaTie()
     logging.debug(viesti)
     kt.toinenTie(logging)
+
+    print("Pääprosessi kirjoitti")
 
     logging.info(verkkis.listaaTuotteet())
     logging.debug(verkkis.kerroMyyjanPalkka())

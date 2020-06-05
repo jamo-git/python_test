@@ -11,3 +11,11 @@ class Kiertotie():
 def toinenTie(logger):
     logger.debug("Inte alls")
     return "Va fan"
+
+class LuokkaProsessi():
+    def __init__(self, logger):
+        self.logger = logger
+
+    def kirjoitaLogiin(self):
+        self.logger.warning("LuokkaProsessi kirjoitti")
+        print("Luokkaprosessi on kirjoittanut")
