@@ -1,12 +1,12 @@
 root - INFO - Tästä se alkaa
-root - INFO - Myyjät ja kaupat luotu
-root - WARNING - LuokkaProsessi kirjoitti
-root - ERROR - Kirjoitus toisesta prosessista
-root - ERROR - En katastrof
+jehu - INFO - Myyjät ja kaupat luotu
+moniajo - WARNING - LuokkaProsessi kirjoitti
+moniajo - ERROR - En katastrof
 root - DEBUG - Och människör
-root - DEBUG - Inte alls
+moniajo - DEBUG - Inte alls
 tokalogger - INFO - Toisesta loggerista viesti
 tokalogger - WARNING - Pääjehu kutsuu toista loggeria
+root - ERROR - Kirjoitus toisesta prosessista
 root - INFO - ['Hiiri', 'Naytto', 'Tietokone']
 root - DEBUG - 2500
 root - INFO - Tuote myyty ja palkka korotettu

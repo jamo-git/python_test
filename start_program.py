@@ -9,6 +9,9 @@ import lisalogi
 Python testi logitukselle sekä OOP
 '''
 
+logging.basicConfig(filename="application.log", filemode="w", 
+    format="%(name)s - %(levelname)s - %(message)s", level=logging.DEBUG)
+
 class Myyja():
     def __init__(self, sukupuoli, ika, palkka):
         self.sukupuoli = sukupuoli
@@ -54,15 +57,17 @@ class Kauppa():
 def alustaLogi():
     if os.path.exists("./application.log"):
         print("Ohnose")
-    logging.basicConfig(filename="application.log", filemode="w", 
-    format="%(name)s - %(levelname)s - %(message)s", level=logging.DEBUG)
+    
+    return logging.getLogger("jehu")
 
 def toinenProsessi():
     logging.error("Kirjoitus toisesta prosessista")
     print("Toka prosari kirjoitti")
 
 if __name__ == "__main__":
-    alustaLogi()
+    mainlog = alustaLogi()
+    moniajolog = logging.getLogger("moniajo")
+
     logging.info("Tästä se alkaa")
 
     miesAki = Myyja("mies", 24, 2500)
@@ -70,19 +75,19 @@ if __name__ == "__main__":
     verkkis = Kauppa(miesAki, "Verkkokauppa", ["Hiiri", "Naytto", "Tietokone"])
     siwa = Kauppa(naisAnna, "Siwa", ["Olut", "Leipa", "Maito"])
 
-    logging.info("Myyjät ja kaupat luotu")
+    mainlog.info("Myyjät ja kaupat luotu")
 
     prosessi = multiprocessing.Process(target=toinenProsessi)
     prosessi.start()
 
-    luokka = kt.LuokkaProsessi(logging)
+    luokka = kt.LuokkaProsessi(moniajolog)
     luokkapros = multiprocessing.Process(target=luokka.kirjoitaLogiin)
     luokkapros.run()
 
-    tie = kt.Kiertotie(logging)
+    tie = kt.Kiertotie(moniajolog)
     viesti = tie.palautaTie()
     logging.debug(viesti)
-    kt.toinenTie(logging)
+    kt.toinenTie(moniajolog)
 
     print("Pääprosessi kirjoitti")
     lisalogi.kirjoitaToiseen("Pääjehu kutsuu toista loggeria")
