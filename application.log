@@ -1,0 +1,11 @@
+root - INFO - Tästä se alkaa
+root - INFO - Myyjät ja kaupat luotu
+root - ERROR - En katastrof
+root - DEBUG - Och människör
+root - DEBUG - Inte alls
+root - INFO - ['Hiiri', 'Naytto', 'Tietokone']
+root - DEBUG - 2500
+root - INFO - Tuote myyty ja palkka korotettu
+root - INFO - ['Naytto', 'Tietokone']
+root - DEBUG - 2625.0
+root - DEBUG - ['Naytto', 'Tietokone', 'Prossu']
