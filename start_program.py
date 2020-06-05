@@ -24,10 +24,13 @@ class Myyja():
         self.ika += 1
 
 class Kauppa():
-    def __init__(self, Myyja, nimi, katalogi):
+    def __init__(self, Myyja, nimi, katalogi=None):
         self.Myyja = Myyja
         self.nimi = nimi
-        self.katalogi = katalogi
+        if katalogi is None:
+            self.katalogi = []
+        else:
+            self.katalogi = katalogi
     
     def listaaTuotteet(self):
         return self.katalogi
