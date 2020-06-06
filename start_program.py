@@ -6,29 +6,35 @@ import time
 import lisalogi
 import time
 
-'''
+"""
 Python testi logitukselle sekä OOP
-'''
+"""
 
-logging.basicConfig(filename="application.log", filemode="w", 
-    format="%(asctime)s  %(name)s  %(levelname)s: %(message)s", level=logging.DEBUG)
+logging.basicConfig(
+    filename="application.log",
+    filemode="w",
+    format="%(asctime)s  %(name)s  %(levelname)s: %(message)s",
+    level=logging.DEBUG,
+)
 
-class Myyja():
+
+class Myyja:
     def __init__(self, sukupuoli, ika, palkka):
         self.sukupuoli = sukupuoli
         self.ika = ika
         self.palkka = palkka
-    
+
     def korotaPalkka(self):
         if self.sukupuoli == "mies":
             self.palkka *= 1.05
         else:
             self.palkka *= 1.02
-    
+
     def vanheta(self):
         self.ika += 1
 
-class Kauppa():
+
+class Kauppa:
     def __init__(self, Myyja, nimi, katalogi=None):
         self.Myyja = Myyja
         self.nimi = nimi
@@ -36,10 +42,10 @@ class Kauppa():
             self.katalogi = []
         else:
             self.katalogi = katalogi
-    
+
     def listaaTuotteet(self):
         return self.katalogi
-    
+
     def kerroMyyjanPalkka(self):
         return self.Myyja.palkka
 
@@ -55,18 +61,22 @@ class Kauppa():
     def taydennaTuotteet(self, tuote):
         self.katalogi.append(tuote)
 
+
 def alustaLogi():
     if os.path.exists("./application.log"):
         print("Logi application.log löytyy")
-    
+
     return logging.getLogger("jehu")
+
 
 def toinenProsessi():
     logging.error("Kirjoitus toisesta prosessista")
 
+
 def ajoituslaskenta(aloitus, lopetus):
     kesti = lopetus - aloitus
-    return str(round(kesti,3))
+    return str(round(kesti, 3))
+
 
 if __name__ == "__main__":
 
@@ -76,7 +86,7 @@ if __name__ == "__main__":
     logging.info("Tästä se alkaa")
 
     aloitus_aika = time.perf_counter()
-    
+
     miesAki = Myyja("mies", 24, 2500)
     naisAnna = Myyja("nainen", 32, 3200)
 
@@ -84,7 +94,9 @@ if __name__ == "__main__":
     siwa = Kauppa(naisAnna, "Siwa", ["Olut", "Leipa", "Maito"])
 
     lopetus_aika = time.perf_counter()
-    print("Myyjän ja kaupan luonti kesti: " + ajoituslaskenta(aloitus_aika, lopetus_aika))
+    print(
+        "Myyjän ja kaupan luonti kesti: " + ajoituslaskenta(aloitus_aika, lopetus_aika)
+    )
 
     mainlog.info("Myyjät ja kaupat luotu")
 
@@ -102,7 +114,9 @@ if __name__ == "__main__":
 
     lisalogi.kirjoitaToiseen("Pääjehu kutsuu toista loggeria")
 
-    proslisalog = multiprocessing.Process(target=lisalogi.kirjoitaToiseen, args=("Tokalogi toinen pros",))
+    proslisalog = multiprocessing.Process(
+        target=lisalogi.kirjoitaToiseen, args=("Tokalogi toinen pros",)
+    )
     proslisalog.start()
 
     logging.info(verkkis.listaaTuotteet())
@@ -113,7 +127,3 @@ if __name__ == "__main__":
 
     verkkis.taydennaTuotteet("Prossu")
     logging.debug(verkkis.listaaTuotteet())
-
-
-
-

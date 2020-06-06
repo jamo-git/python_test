@@ -2,6 +2,7 @@ import logging
 import time
 from start_program import ajoituslaskenta
 
+
 def kirjoitaToiseen(viesti):
     aloitus = time.perf_counter()
     logger = logging.getLogger("tokalogger")

@@ -16,6 +16,8 @@ else:
 
 p2 = subprocess.run(["cat", "application.log"], capture_output=True, text=True)
 
-p3 = subprocess.run(["grep", "-n", "ERROR"], capture_output=True, text=True, input=p2.stdout)
+p3 = subprocess.run(
+    ["grep", "-n", "ERROR"], capture_output=True, text=True, input=p2.stdout
+)
 
 print(p3.stdout)
