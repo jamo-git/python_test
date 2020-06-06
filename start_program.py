@@ -4,6 +4,7 @@ import os.path
 import multiprocessing
 import time
 import lisalogi
+import time
 
 '''
 Python testi logitukselle sekä OOP
@@ -63,16 +64,27 @@ def alustaLogi():
 def toinenProsessi():
     logging.error("Kirjoitus toisesta prosessista")
 
+def ajoituslaskenta(aloitus, lopetus):
+    kesti = lopetus - aloitus
+    return str(round(kesti,3))
+
 if __name__ == "__main__":
+
     mainlog = alustaLogi()
     moniajolog = logging.getLogger("moniajo")
 
     logging.info("Tästä se alkaa")
 
+    aloitus_aika = time.perf_counter()
+    
     miesAki = Myyja("mies", 24, 2500)
     naisAnna = Myyja("nainen", 32, 3200)
+
     verkkis = Kauppa(miesAki, "Verkkokauppa", ["Hiiri", "Naytto", "Tietokone"])
     siwa = Kauppa(naisAnna, "Siwa", ["Olut", "Leipa", "Maito"])
+
+    lopetus_aika = time.perf_counter()
+    print("Myyjän ja kaupan luonti kesti: " + ajoituslaskenta(aloitus_aika, lopetus_aika))
 
     mainlog.info("Myyjät ja kaupat luotu")
 

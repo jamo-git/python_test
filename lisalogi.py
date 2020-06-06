@@ -1,6 +1,9 @@
 import logging
+import time
+from start_program import ajoituslaskenta
 
 def kirjoitaToiseen(viesti):
+    aloitus = time.perf_counter()
     logger = logging.getLogger("tokalogger")
 
     formatter = logging.Formatter("%(asctime)s  %(name)s  %(levelname)s: %(message)s")
@@ -10,3 +13,6 @@ def kirjoitaToiseen(viesti):
     logger.info("Toisesta loggerista viesti")
     logger.warning(viesti)
     logger.removeHandler(handler)
+    lopetus = time.perf_counter()
+
+    print("kirjoitaToiseen kesti: " + ajoituslaskenta(aloitus, lopetus))

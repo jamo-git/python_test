@@ -1,17 +1,17 @@
-2020-06-05 23:23:11,088  root  INFO: Tästä se alkaa
-2020-06-05 23:23:11,088  jehu  INFO: Myyjät ja kaupat luotu
-2020-06-05 23:23:11,092  moniajo  WARNING: LuokkaProsessi kirjoitti
-2020-06-05 23:23:11,093  moniajo  ERROR: En katastrof
-2020-06-05 23:23:11,093  root  CRITICAL: Och människör
-2020-06-05 23:23:11,093  moniajo  DEBUG: Inte alls
-2020-06-05 23:23:11,093  tokalogger  INFO: Toisesta loggerista viesti
-2020-06-05 23:23:11,094  tokalogger  WARNING: Pääjehu kutsuu toista loggeria
-2020-06-05 23:23:11,096  root  INFO: ['Hiiri', 'Naytto', 'Tietokone']
-2020-06-05 23:23:11,097  root  DEBUG: 2500
-2020-06-05 23:23:11,094  root  ERROR: Kirjoitus toisesta prosessista
-2020-06-05 23:23:11,097  root  INFO: Tuote myyty ja palkka korotettu
-2020-06-05 23:23:11,097  root  INFO: ['Naytto', 'Tietokone']
-2020-06-05 23:23:11,097  root  DEBUG: 2625.0
-2020-06-05 23:23:11,097  root  DEBUG: ['Naytto', 'Tietokone', 'Prossu']
-2020-06-05 23:23:11,098  tokalogger  INFO: Toisesta loggerista viesti
-2020-06-05 23:23:11,100  tokalogger  WARNING: Tokalogi toinen pros
+2020-06-06 09:27:56,765  root  INFO: Tästä se alkaa
+2020-06-06 09:27:56,765  jehu  INFO: Myyjät ja kaupat luotu
+2020-06-06 09:27:56,770  moniajo  WARNING: LuokkaProsessi kirjoitti
+2020-06-06 09:27:56,770  moniajo  ERROR: En katastrof
+2020-06-06 09:27:56,770  root  CRITICAL: Och människör
+2020-06-06 09:27:56,771  moniajo  DEBUG: Inte alls
+2020-06-06 09:27:56,771  tokalogger  INFO: Toisesta loggerista viesti
+2020-06-06 09:27:56,771  tokalogger  WARNING: Pääjehu kutsuu toista loggeria
+2020-06-06 09:27:56,772  root  ERROR: Kirjoitus toisesta prosessista
+2020-06-06 09:27:56,778  root  INFO: ['Hiiri', 'Naytto', 'Tietokone']
+2020-06-06 09:27:56,779  root  DEBUG: 2500
+2020-06-06 09:27:56,779  root  INFO: Tuote myyty ja palkka korotettu
+2020-06-06 09:27:56,779  root  INFO: ['Naytto', 'Tietokone']
+2020-06-06 09:27:56,779  root  DEBUG: 2625.0
+2020-06-06 09:27:56,779  root  DEBUG: ['Naytto', 'Tietokone', 'Prossu']
+2020-06-06 09:27:56,780  tokalogger  INFO: Toisesta loggerista viesti
+2020-06-06 09:27:56,781  tokalogger  WARNING: Tokalogi toinen pros
