@@ -2,12 +2,13 @@ import concurrent.futures
 import time
 import platform
 import requests
+import sys
 
 
 def teeajoa(odotus):
     print(f"Lähdin tekemään ajoa, odottaen {odotus} sekuntia")
     time.sleep(odotus)
-    print(f"{platform.processor()} : {platform.architecture()}")
+    print(f"{platform.processor()} : {platform.architecture()}\n{sys.executable}")
     return "Suoritettu arkkitehtuuri selvitys"
 
 
