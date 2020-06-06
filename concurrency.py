@@ -25,7 +25,11 @@ with concurrent.futures.ThreadPoolExecutor() as exec:
 
     sivut = ["http://www.heroku.com", "http://www.google.fi", "http://www.iltalehti.fi",
         "http://www.microsoft.com", "http://www.apple.com", "http://www.funet.fi"]
-    results = [exec.submit(ajatoista, sivu) for sivu in sivut]
 
-    for f in concurrent.futures.as_completed(results):
-        print(f.result())
+    # results = [exec.submit(ajatoista, sivu) for sivu in sivut]
+    # for f in concurrent.futures.as_completed(results):
+    #     print(f.result())
+
+    results = exec.map(ajatoista, sivut)
+    for result in results:
+        print(result)
