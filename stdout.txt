@@ -1,0 +1,11 @@
+total 56
+drwxr-xr-x  5 jarmo  staff   160  6 Jun 08:52 __pycache__
+-rw-r--r--  1 jarmo  staff   592  6 Jun 21:41 aliprosessi.py
+-rw-r--r--  1 jarmo  staff  1060  6 Jun 09:27 application.log
+-rw-r--r--  1 jarmo  staff  1144  6 Jun 19:06 concurrency.py
+-rw-r--r--  1 jarmo  staff   430  5 Jun 23:21 kiertotie.py
+-rw-r--r--  1 jarmo  staff   585  6 Jun 07:43 lisalogi.py
+-rw-r--r--  1 jarmo  staff  3157  6 Jun 08:52 start_program.py
+-rw-r--r--  1 jarmo  staff   720  6 Jun 21:39 stdout.txt
+ 
+Return code	0
